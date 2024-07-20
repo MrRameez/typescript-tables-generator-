@@ -1,0 +1,229 @@
+  /* *{
+    box-sizing: border-box;
+}
+body {
+    background: rgb(49, 48, 70);
+    background: linear-gradient(90deg, rgb(53, 88, 94) 0%, rgb(148, 149, 150) 50%, rgb(192, 203, 206) 80%);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: rgb(37, 42, 53);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#tableForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputId {
+    font-size: 20px;
+    border-radius: 5px;
+}
+button {
+    font-size: 20px;
+    border-radius: 5px;
+}
+.time-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(37, 42, 53);
+} 
+
+ */
+
+
+ /* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #1c3b48 0%, #283e51 50%, #515a60 100%);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d3d3d3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Form container styles */
+#tableForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: slideIn 1s ease-out;
+}
+
+/* Input styles */
+#inputId {
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000000;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button styles */
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3aaf85;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    animation: bounceIn 1s ease;
+}
+
+button:hover {
+    background-color: #33a078;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #2a8b65;
+    transform: translateY(0);
+}
+
+/* Table container styles */
+.time-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #ffffff;
+    width: 80%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.time-table div {
+    animation: slideUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.time-table div:nth-child(1) { animation-delay: 0.1s; }
+.time-table div:nth-child(2) { animation-delay: 0.2s; }
+.time-table div:nth-child(3) { animation-delay: 0.3s; }
+.time-table div:nth-child(4) { animation-delay: 0.4s; }
+.time-table div:nth-child(5) { animation-delay: 0.5s; }
+.time-table div:nth-child(6) { animation-delay: 0.6s; }
+.time-table div:nth-child(7) { animation-delay: 0.7s; }
+.time-table div:nth-child(8) { animation-delay: 0.8s; }
+.time-table div:nth-child(9) { animation-delay: 0.9s; }
+.time-table div:nth-child(10) { animation-delay: 1s; }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #tableForm {
+        flex-direction: column;
+    }
+
+    #inputId {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .time-table {
+        width: 100%;
+        font-size: 1.2em;
+    }
+}
